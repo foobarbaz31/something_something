@@ -1,0 +1,9 @@
+{
+  "name": "isha_take_home_tree",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
