@@ -67,7 +67,7 @@ Thus we save the path from the current node all the way to the root node
 
 ### Query Patterns
 
-1. Adding a new node to a parent (i.e POST /api/tree endpoint)
+####  Adding a new node to a parent (i.e POST /api/tree endpoint)
 
 When the add endpoint is called, following steps will be run
 
@@ -91,7 +91,7 @@ $path_of_new_node = $new_node_id_from_1.2" + "." + $parent_path_from_1.1
 INSERT INTO RELATIONSHIPS(NODE_ID, PATH) VALUES($new_node_id_from_1.2, $path_of_new_node)
 ```
 
-2. Fetching the entire tree (i.e GET /api/tree endpoint)
+####  Fetching the entire tree (i.e GET /api/tree endpoint)
 
 In order to fetch the entire tree, we first determine the root node id using the following query
 ```
