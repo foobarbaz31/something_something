@@ -34,6 +34,7 @@ The node_id column in this table maps to the id of the node in the NODES table
 For the example provided in the problem statement, the populated tables will look as below
 
 1. NODES
+```
 +----+----------+
 | ID | LABEL    |
 +----+----------+
@@ -45,10 +46,10 @@ For the example provided in the problem statement, the populated tables will loo
 |  6 | elephant |
 |  7 | frog     |
 +----+----------+
-
+```
 
 2. RELATIONSHIPS
-mysql> SELECT * from RELATIONSHIPS ;
+```
 +----+---------+---------+---------+
 | ID | NODE_ID | PATH    | IS_ROOT |
 +----+---------+---------+---------+
@@ -60,7 +61,7 @@ mysql> SELECT * from RELATIONSHIPS ;
 |  6 |       6 | 6.5.3.1 |       0 |
 |  7 |       7 | 7.1     |       0 |
 +----+---------+---------+---------+
-7 rows in set (0.00 sec)
+```
 
 Thus we save the path from the current node all the way to the root node
 
