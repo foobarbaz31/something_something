@@ -105,8 +105,9 @@ $entire_tree_data = SELECT * FROM RELATIONSHIPS WHERE PATH LIKE '%$root_node_id%
 
 Finally we need to do some in-memory processing to serialize the data model into TreeNode class and establish appropriate children attributes on the node. That can be achieved using the following function:
 ```
-function serializeTreeFromDb(entire_tree_data) {
-  let root = entire_tree_data
+function serializeTreeFromDb(entire_tree) {
+  const data = entire_tree
+  let root = undefined
   let nodesArray = []
   let level = 1
   for(let node of data) {
@@ -123,9 +124,10 @@ function serializeTreeFromDb(entire_tree_data) {
       nodesArray[++level] = currentNode
     }
   }  
-  return root; // returns the root node of the tree created in-memory
+  return root
 }
 ```
+This serialized tree can be persisted in memory and converted to expected response structure using the formatter.deserialize method.
 
 ## Approach 2 : Non-relational database
 
